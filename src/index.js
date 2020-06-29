@@ -1,5 +1,19 @@
-// This file should import Projects.js and contain DOM-related logic.
-import { project } from './modules/Projects'
+import { projectFactory } from './modules/Projects'
+import {todoLists} from './modules/Todolists'
+/*
+Needs:
+-Let people move TodoLists between projects.
+-
+-
+*/
 
-console.log(project.key1)
-console.log(project.key2)
+let newProject = document.getElementById('newProject')
+newProject.addEventListener('click', function(e){
+    projectFactory()
+
+});
+
+let newTask = document.getElementById('newTask')
+newTask.addEventListener('click', function(e){
+
+})
