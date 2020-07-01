@@ -17,3 +17,7 @@ let newTask = document.getElementById('newTask')
 newTask.addEventListener('click', function(e){
 
 })
+
+function displayForm(){
+    
+}
