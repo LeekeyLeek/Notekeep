@@ -7,10 +7,16 @@ Needs:
 -Create todoLists (function) to specific project object. Each project needs local todoLists.
 -
 */
-const projectFactory = () => {
-    
-    createProject = () => {
-        return projectDiv = document.createElement('div')
+const project = (() => {
+
+    let projectContainer = document.getElementById('projectContainer');
+
+    let create = () => { 
+       let projectDiv = document.createElement('div');
+       projectDiv.innerHTML = 'childDiv test'
+       projectDiv.className = 'projectDivs';
+       projectContainer.appendChild(projectDiv);
+        
     }
     
     
@@ -18,7 +24,7 @@ const projectFactory = () => {
 
 
 
-    return {createProject,}
-}
+    return {create}
+})()
 
-export { projectFactory }
+export { project }

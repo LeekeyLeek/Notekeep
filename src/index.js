@@ -1,5 +1,6 @@
-import { projectFactory } from './modules/Projects'
-import {todoLists} from './modules/Todolists'
+import { project } from './modules/Projects';
+import {todoLists} from './modules/Todolists';
+import './style.css';
 /*
 Needs:
 -Let people move TodoLists between projects.
@@ -9,7 +10,7 @@ Needs:
 
 let newProject = document.getElementById('newProject')
 newProject.addEventListener('click', function(e){
-    projectFactory()
+    project.create()
 
 });
 
