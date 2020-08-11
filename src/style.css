@@ -1,11 +1,11 @@
 #projectContainer {
     border: 5px solid black;
-    width: 500px;
-    height: 500px;
+    width: auto;
+    height: auto;
 }
 
 .projectDivs {
     border: 3px solid black;
-    width: 100px;
-    height: 100px;
+    width: 400px;
+    height: 500px;
 }

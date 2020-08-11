@@ -1,11 +1,9 @@
-import {todoLists} from './Todolists'
-
+import {lists} from './Todolists';
 /*
-//This will contain Todolists.js and will be used to have seperate lists of Todos. 
-Needs:
--Project objects should be able to contain multiple todoLists
--Create todoLists (function) to specific project object. Each project needs local todoLists.
--
+Steps:
+-Create TodoList div, give it set dimensions. 
+-Priority/dueDate appended to bottom left of div
+-Title at top. Description is below on another row.
 */
 const project = (() => {
 
@@ -13,17 +11,18 @@ const project = (() => {
 
     let create = () => { 
        let projectDiv = document.createElement('div');
-       projectDiv.innerHTML = 'childDiv test'
        projectDiv.className = 'projectDivs';
+
+       let newTask = document.createElement('button');
+       newTask.className = 'newTask';
+       newTask.innerHTML = 'New Task';
+       
+       projectDiv.appendChild(newTask)
        projectContainer.appendChild(projectDiv);
-        
-    }
+    
+    };
     
     
-    
-
-
-
     return {create}
 })()
 

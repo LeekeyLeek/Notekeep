@@ -1,24 +1,28 @@
 import { project } from './modules/Projects';
-import {todoLists} from './modules/Todolists';
+import {lists} from './modules/Todolists';
 import './style.css';
-/*
-Needs:
--Let people move TodoLists between projects.
--
--
-*/
 
-let newProject = document.getElementById('newProject')
-newProject.addEventListener('click', function(e){
-    project.create()
-
-});
-
-let newTask = document.getElementById('newTask')
-newTask.addEventListener('click', function(e){
-
-})
 
 function displayForm(){
     
 }
+
+let newProjectBtn = document.getElementById('newProject')
+newProjectBtn.addEventListener('click', function(e){
+    project.create()
+    
+
+});
+
+// List only updates once
+const projectList = document.getElementsByClassName('projectDivs')
+console.log(projectList)
+const listItems = projectList.getElementsByClassName('newTask')
+
+listItems.forEach(function(button){
+    button.addEventListener('click', function(e){
+        let parentNode = button.parentNode 
+        lists.create(parentNode)
+    })
+
+});
