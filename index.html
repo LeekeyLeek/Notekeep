@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
     <!--
+Bugs: 
+-Adding new tasks works, but only on divs that already existed. Need
+code to run/update list everytime new project is created.
 Steps:
 -Later on, must make "tasks" local to projects. Focus on (default) Project 
 functionality first.
@@ -17,18 +20,19 @@ functionality first.
 
     <button id="newProject">New Project</button>
     <div id="projectContainer">
-        <div id="defaultProject" class="projectDivs">Default Project</div>
-
+        <div id="defaultProject" class="projectDivs">Default Project
+            <br>
+            <button class="newTask">New Task</button>
+        </div>
 
 
     </div>
-<br>
     
 
     
 
 
-    <button id="newTask">New Task</button>
+    
     <div id="formContainer" style="display: none;">
         <form id="taskForm" onsubmit="" method="POST">
             <label for="title">Title</label>
