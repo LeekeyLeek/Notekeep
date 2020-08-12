@@ -16,6 +16,10 @@ const project = (() => {
        let newTask = document.createElement('button');
        newTask.className = 'newTask';
        newTask.innerHTML = 'New Task';
+       newTask.addEventListener('click', function(e){
+            let parentNode = this.parentNode
+            lists.create(parentNode)
+       })
        
        projectDiv.appendChild(newTask)
        projectContainer.appendChild(projectDiv);

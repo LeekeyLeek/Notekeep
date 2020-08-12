@@ -6,6 +6,12 @@
 
 .projectDivs {
     border: 3px solid black;
-    width: 400px;
+    width: 450px;
     height: 500px;
+}
+
+.todoList {
+    border: 1px solid black;
+    width: auto;
+    height: auto;
 }
