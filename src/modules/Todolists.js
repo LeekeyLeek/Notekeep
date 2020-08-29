@@ -1,15 +1,5 @@
-/*
-Steps:
--Add textarea titles to all projects created
--Add textarea titles and descriptions to all lists/tasks.
-*/
-
 const lists = (() => {
     
-    let createTitle = () => {
-
-    }
-
     let setPriority = (parentNode) => {
         switch(parentNode.style.backgroundColor){
             case 'red':
@@ -22,10 +12,6 @@ const lists = (() => {
                 parentNode.style.backgroundColor = 'red';
                 break
         }
-    }
-
-    let dueDate = () => {
-        //Use module to include calendar UI
     }
 
     let create = (parentNode) => {
@@ -42,6 +28,28 @@ const lists = (() => {
             let parentNode = this.parentNode
             lists.setPriority(parentNode)
         });
+
+        let listTitle = document.createElement('textarea')
+        listTitle.className = 'listTitles';
+        listTitle.maxLength = '25';
+        listTitle.rows = '1';
+        listTitle.cols = '25';
+        listTitle.innerHTML = ' Task Title... ';
+
+        let br1 = document.createElement('br')
+        let br2 = document.createElement('br')
+
+        let listDesc = document.createElement('textarea')
+        listDesc.className = 'listDescs';
+        listDesc.maxLength = '240';
+        listDesc.rows = '5';
+        listDesc.cols = '55';
+        listDesc.innerHTML = ' Task description... ';
+
+        todoList.appendChild(listTitle)
+        todoList.appendChild(br1)
+        todoList.appendChild(listDesc)
+        todoList.appendChild(br2)
         todoList.appendChild(setPriority)
 
     }

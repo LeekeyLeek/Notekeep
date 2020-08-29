@@ -2,15 +2,6 @@ body {
     background-color: #2b2c30;
     overflow: hidden;
 }
-/*Might change to .projectTitles*/
-textarea {
-    background: transparent;
-    color: white;
-    resize: none;
-    border: 0 none;
-    outline: none;
-    font-size: 18px;
-}
 
 /*CSS Grid to autoflow. Min-1 Max-5. Auto resizes to fit viewport. */
 #projectContainer {
@@ -38,9 +29,35 @@ textarea {
     height: 125px;
 }
 
+/*Have color change if unreadable in certain backgrounds*/
+.projectTitles {
+    background: transparent;
+    color: white;
+    resize: none;
+    border: 0 none;
+    outline: none;
+    font-size: 18px;
+}
+
+.listTitles {
+    background: transparent;
+    color: black;
+    resize: none;
+    border: 0 none;
+    outline: none;
+    font-size: 16px;
+}
+
+.listDescs {
+    background: transparent;
+    color: black;
+    resize: none;
+    border: 0 none;
+    outline: none;
+    font-size: 12px;
+}
+
 .priority {
     border: 1px solid black;
     position: relative;
-    left: -75px;
-    top: 100px;
 }

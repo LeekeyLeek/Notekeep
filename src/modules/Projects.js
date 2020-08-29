@@ -1,9 +1,5 @@
 import {lists} from './Todolists';
-/*
-Steps:
--Add textarea titles to all projects created
--Add textarea titles and descriptions to all lists/tasks.
-*/
+
 const project = (() => {
 
     let projectContainer = document.getElementById('projectContainer');
@@ -26,7 +22,7 @@ const project = (() => {
        projectTitle.rows = '1';
        projectTitle.cols = '25';
        projectTitle.innerHTML = ' Project Title... ';
-       
+
        let br = document.createElement('br')
 
        projectDiv.appendChild(projectTitle)
