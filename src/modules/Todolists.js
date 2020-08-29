@@ -1,21 +1,34 @@
+/*
+Steps:
+-Create TodoList div, give it set dimensions. 
+-Priority/dueDate appended to bottom left of div
+-Title at top. Description is below on another row.
+*/
+
 const lists = (() => {
     
     /* Can possibly make these interactable text boxes.
     title = title;
     description = description; */
-    
 
-    let setPriority = () => {
-        //switch statement (on button click) between green,yellow,red
-        switch(priority){
-            case 1:
+
+    let setPriority = (parentNode) => {
+        switch(parentNode.style.backgroundColor){
+            case 'red':
                 //set div to green
-
-            case 2:
+                console.log("Running case 1")
+                parentNode.style.backgroundColor = 'green';
+                break
+            case 'green':
                 //set div to yellow
-
-            case 3:
+                console.log("Running case 2")
+                parentNode.style.backgroundColor = 'yellow';
+                break
+            case 'yellow':
                 //set div to red
+                console.log("Running case 3")
+                parentNode.style.backgroundColor = 'red';
+                break
 
         }
     }
@@ -25,15 +38,22 @@ const lists = (() => {
     }
 
     let create = (parentNode) => {
-        /*
-        Creates empty todoList div. todoItems are added/edited within todoList.
-        */
 
         let todoList = document.createElement('div')
         todoList.className = 'todoList';
         todoList.innerHTML = 'todoList test';
+        todoList.style.backgroundColor = 'green';
         parentNode.appendChild(todoList)
         
+        let setPriority = document.createElement('button')
+        setPriority.innerHTML = 'Change Priority';
+        setPriority.className = 'priority';
+        setPriority.addEventListener('click', function(e){
+            let parentNode = this.parentNode
+            lists.setPriority(parentNode)
+        });
+        todoList.appendChild(setPriority)
+
     }
 
 

@@ -25,8 +25,7 @@ const project = (() => {
        projectContainer.appendChild(projectDiv);
     
     };
-    
-    
+        
     return {create}
 })()
 

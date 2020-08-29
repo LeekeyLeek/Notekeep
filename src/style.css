@@ -12,6 +12,10 @@
 
 .todoList {
     border: 1px solid black;
-    width: auto;
-    height: auto;
+    width: 450px;
+    height: 125px;
+}
+
+.priority {
+    border: 1px solid black
 }
