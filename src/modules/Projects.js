@@ -1,9 +1,8 @@
 import {lists} from './Todolists';
 /*
 Steps:
--Create TodoList div, give it set dimensions. 
--Priority/dueDate appended to bottom left of div
--Title at top. Description is below on another row.
+-Add textarea titles to all projects created
+-Add textarea titles and descriptions to all lists/tasks.
 */
 const project = (() => {
 
@@ -21,9 +20,19 @@ const project = (() => {
             lists.create(parentNode)
        })
        
+       let projectTitle = document.createElement('textarea')
+       projectTitle.className = 'projectTitles';
+       projectTitle.maxLength = '25';
+       projectTitle.rows = '1';
+       projectTitle.cols = '25';
+       projectTitle.innerHTML = ' Project Title... ';
+       
+       let br = document.createElement('br')
+
+       projectDiv.appendChild(projectTitle)
+       projectDiv.appendChild(br)
        projectDiv.appendChild(newTask)
        projectContainer.appendChild(projectDiv);
-    
     };
         
     return {create}

@@ -1,50 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-    <!--
-Steps:
--Work on adding detail to the actual Lists now. 
-Title/Desc, Duedate/Priority. Sizing/Styling, etc.
 
-    -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
 
     <button id="newProject">New Project</button>
     <div id="projectContainer">
-        <div id="defaultProject" class="projectDivs">Default Project
+        <div id="defaultProject" class="projectDivs">
+            
+            <textarea id="defaultTitle" class="projectTitles" 
+            name="defaultTitle" maxlength="25" 
+            rows="1" cols="25"> Project Title... </textarea> 
+            
             <br>
             <button id='defaultTask' class="newTask">New Task</button>
         </div>
 
 
     </div>
-    
-
-    
-
-    <div id="formContainer" style="display: none;">
-        <form id="taskForm" onsubmit="" method="POST">
-            <label for="title">Title</label>
-            <input type="text" class="formInput" id="title" name="title"><br>
-
-            <label for="description">Description</label>
-            <input type="text" class="formInput" id="description" name="description"><br>
-
-            <label for="priority">Select priority</label>
-            <input type="radio" class="formInput" id="green" name="priority">
-            <input type="radio" class="formInput" id="yellow" name="priority">
-            <input type="radio" class="formInput" id="red" name="priority"><br>
-
-            <input type="submit" value="Submit" onclick="">
-        </form>
-    </div>
-
-
-    
 
     <script src='main.js'></script>
 </body>

@@ -1,11 +1,33 @@
+body {
+    background-color: #2b2c30;
+    overflow: hidden;
+}
+/*Might change to .projectTitles*/
+textarea {
+    background: transparent;
+    color: white;
+    resize: none;
+    border: 0 none;
+    outline: none;
+    font-size: 18px;
+}
+
+/*CSS Grid to autoflow. Min-1 Max-5. Auto resizes to fit viewport. */
 #projectContainer {
-    border: 5px solid black;
+    display: grid;
+    border: 3px solid rgb(255, 255, 255);
+    border-radius: 2px;
+    background-color: #919191;
     width: auto;
     height: auto;
+    grid-auto-flow: row;
+    
 }
 
 .projectDivs {
     border: 3px solid black;
+    border-radius: 2px;
+    background-color: #3e4046;
     width: 450px;
     height: 500px;
 }
@@ -17,5 +39,8 @@
 }
 
 .priority {
-    border: 1px solid black
+    border: 1px solid black;
+    position: relative;
+    left: -75px;
+    top: 100px;
 }

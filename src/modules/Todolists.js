@@ -1,35 +1,26 @@
 /*
 Steps:
--Create TodoList div, give it set dimensions. 
--Priority/dueDate appended to bottom left of div
--Title at top. Description is below on another row.
+-Add textarea titles to all projects created
+-Add textarea titles and descriptions to all lists/tasks.
 */
 
 const lists = (() => {
     
-    /* Can possibly make these interactable text boxes.
-    title = title;
-    description = description; */
+    let createTitle = () => {
 
+    }
 
     let setPriority = (parentNode) => {
         switch(parentNode.style.backgroundColor){
             case 'red':
-                //set div to green
-                console.log("Running case 1")
                 parentNode.style.backgroundColor = 'green';
                 break
             case 'green':
-                //set div to yellow
-                console.log("Running case 2")
                 parentNode.style.backgroundColor = 'yellow';
                 break
             case 'yellow':
-                //set div to red
-                console.log("Running case 3")
                 parentNode.style.backgroundColor = 'red';
                 break
-
         }
     }
 
@@ -41,7 +32,6 @@ const lists = (() => {
 
         let todoList = document.createElement('div')
         todoList.className = 'todoList';
-        todoList.innerHTML = 'todoList test';
         todoList.style.backgroundColor = 'green';
         parentNode.appendChild(todoList)
         
@@ -57,7 +47,7 @@ const lists = (() => {
     }
 
 
-    return {title, description, create, dueDate, setPriority}
+    return {create, dueDate, setPriority}
 })()
 
 export { lists }
