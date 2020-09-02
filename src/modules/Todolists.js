@@ -35,7 +35,7 @@ const lists = (() => {
         });
 
        let deleteBtn = document.createElement('button')
-       deleteBtn.className = 'deleteBtn';
+       deleteBtn.className = 'dltTask';
        deleteBtn.innerHTML = 'Delete Task'
        deleteBtn.addEventListener('click', function(e) {
            let parentNode = this.parentNode

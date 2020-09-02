@@ -13,8 +13,8 @@ defaultTaskBtn.addEventListener('click', function(e){
     lists.create(parentNode)
 });
 
-const deleteBtn = document.getElementById('defaultDlt')
-deleteBtn.addEventListener('click', function(e) {
+const defaultDlt = document.getElementById('defaultDlt')
+defaultDlt.addEventListener('click', function(e) {
     let parentNode = this.parentNode
-    lists.deleteTask(parentNode)
+    project.deleteProj(parentNode)
 });

@@ -1,21 +1,11 @@
 import {lists} from './Todolists';
-/*
-Features still needed:
--Delete/complete Tasks
-
--Function that deletes this.projectDiv or this.todoList. Removes/deletes child element possibly.
-
--Function that marks a task as complete with a checkmark. 
-    -Can use a simple checkbox that greys out the task when it's "true" and lights up when "false"
- */
-
 
 const project = (() => {
 
     let projectContainer = document.getElementById('projectContainer');
 
-    let deleteProj = () => {
-        
+    let deleteProj = (parentNode) => {
+        parentNode.remove()
     };
 
     let create = () => { 
@@ -38,15 +28,24 @@ const project = (() => {
        projectTitle.cols = '25';
        projectTitle.placeholder = ' Project Title... ';
 
+       let deleteBtn = document.createElement('button')
+       deleteBtn.className = 'dltProj';
+       deleteBtn.innerHTML = 'Delete Project'
+       deleteBtn.addEventListener('click', function(e) {
+           let parentNode = this.parentNode
+           project.deleteProj(parentNode)
+       })
+
        let br = document.createElement('br')
 
        projectDiv.appendChild(projectTitle)
+       projectDiv.appendChild(deleteBtn)
        projectDiv.appendChild(br)
        projectDiv.appendChild(newTask)
        projectContainer.appendChild(projectDiv);
     };
         
-    return {create}
+    return {create, deleteProj}
 })()
 
 export { project }
