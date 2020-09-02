@@ -1,9 +1,8 @@
 const lists = (() => {
-    
+
     let deleteTask = (parentNode) => {
         parentNode.remove()
     }
-
 
     let setPriority = (parentNode) => {
         switch(parentNode.style.backgroundColor){
@@ -59,7 +58,20 @@ const lists = (() => {
         listDesc.cols = '55';
         listDesc.placeholder = ' Task description... ';
 
+        let checkbox = document.createElement('input')
+        checkbox.type = 'checkbox';
+        checkbox.className = 'checkbox';
+        checkbox.addEventListener('change', function(e){
+            let parentNode = this.parentNode
+            if(this.checked){
+                parentNode.style.webkitFilter = 'brightness(50%)'
+            } else {
+                parentNode.style.webkitFilter = 'brightness(100%)'
+            }
+        })
+
         todoList.appendChild(listTitle)
+        todoList.appendChild(checkbox)
         todoList.appendChild(br1)
         todoList.appendChild(listDesc)
         todoList.appendChild(br2)
@@ -67,7 +79,6 @@ const lists = (() => {
         todoList.appendChild(deleteBtn)
 
     }
-
 
     return {create, setPriority, deleteTask}
 })()

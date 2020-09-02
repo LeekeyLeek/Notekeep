@@ -1,4 +1,4 @@
-import { project } from './modules/Projects';
+import {project} from './modules/Projects';
 import {lists} from './modules/Todolists';
 import './style.css';
 

@@ -19,7 +19,6 @@ const project = (() => {
             let parentNode = this.parentNode
             lists.create(parentNode)
        })
-
        
        let projectTitle = document.createElement('textarea')
        projectTitle.className = 'projectTitles';
