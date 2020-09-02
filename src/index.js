@@ -11,4 +11,10 @@ const defaultTaskBtn = document.getElementById('defaultTask')
 defaultTaskBtn.addEventListener('click', function(e){
     let parentNode = this.parentNode
     lists.create(parentNode)
-})
+});
+
+const deleteBtn = document.getElementById('defaultDlt')
+deleteBtn.addEventListener('click', function(e) {
+    let parentNode = this.parentNode
+    lists.deleteTask(parentNode)
+});
