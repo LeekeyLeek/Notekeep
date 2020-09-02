@@ -5,17 +5,43 @@ const lists = (() => {
     }
 
     let setPriority = (parentNode) => {
-        switch(parentNode.style.backgroundColor){
-            case 'red':
-                parentNode.style.backgroundColor = 'green';
+        switch(parentNode.style.webkitFilter){
+            case 'brightness(50%)':
                 break
-            case 'green':
-                parentNode.style.backgroundColor = 'yellow';
+
+            case 'brightness(100%)':
+
+                switch(parentNode.style.backgroundColor){
+                    case 'red':
+                        parentNode.style.backgroundColor = 'green';
+                        break
+                    case 'green':
+                        parentNode.style.backgroundColor = 'yellow';
+                        break
+                    case 'yellow':
+                        parentNode.style.backgroundColor = 'red';
+                        break 
+                    }
+
                 break
-            case 'yellow':
-                parentNode.style.backgroundColor = 'red';
+
+            default:
+
+                switch(parentNode.style.backgroundColor){
+                    case 'red':
+                        parentNode.style.backgroundColor = 'green';
+                        break
+                    case 'green':
+                        parentNode.style.backgroundColor = 'yellow';
+                        break
+                    case 'yellow':
+                        parentNode.style.backgroundColor = 'red';
+                        break
+                    }
+                    
                 break
-        }
+            }
+
     }
 
     let create = (parentNode) => {
