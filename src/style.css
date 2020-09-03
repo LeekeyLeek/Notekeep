@@ -1,63 +1,114 @@
+::placeholder { 
+    color: rgb(196, 194, 194);
+    opacity: 1;
+  }
+
 body {
-    background-color: #2b2c30;
+    background-color: #484b53;
     overflow: hidden;
 }
 
-/*CSS Grid to autoflow. Min-1 Max-5. Auto resizes to fit viewport. */
+h1 {
+    text-align: center;
+}
+
+textarea {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+}
+
+button {
+    color: #fff;
+    background-color: #17a2b8;
+    border-color: #17a2b8;
+    border-radius: 5px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+}
+
 #projectContainer {
     display: grid;
-    border: 3px solid rgb(255, 255, 255);
-    border-radius: 2px;
-    background-color: #919191;
+    border: 3px white;
+    border-radius: 5px;
     width: auto;
     height: auto;
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
     grid-auto-flow: row;
     
 }
 
+#pageTitle {
+    font-family: 'Open Sans', sans-serif;
+    color: #fff;
+}
+
+#newProject {
+    float: center;
+    position: relative;
+}
+
 .projectDivs {
-    border: 3px solid black;
-    border-radius: 2px;
-    background-color: #3e4046;
+    border: 3px solid transparent;
+    border-radius: 5px;
+    background-color: teal;
     width: 450px;
-    height: 500px;
+    height: 550px;
+    box-shadow: 5px 5px 5px black;
 }
 
 .todoList {
-    border: 1px solid black;
+    display: grid;
+    border: 1px solid transparent;
+    border-radius: 5px;
     width: 450px;
-    height: 125px;
+    height: 150px;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 2fr 1fr;
 }
 
-/*Have color change if unreadable in certain backgrounds*/
 .projectTitles {
     background: transparent;
     color: white;
     resize: none;
     border: 0 none;
     outline: none;
-    font-size: 18px;
+    font-size: 1rem;
 }
 
 .listTitles {
     background: transparent;
-    color: black;
+    color: white;
     resize: none;
     border: 0 none;
     outline: none;
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 .listDescs {
     background: transparent;
-    color: black;
+    color: white;
     resize: none;
     border: 0 none;
     outline: none;
-    font-size: 12px;
+    font-size: 1rem;
 }
 
 .priority {
-    border: 1px solid black;
-    position: relative;
+
+}
+
+.dltTask {
+
 }

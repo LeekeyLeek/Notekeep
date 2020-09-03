@@ -12,14 +12,14 @@ const lists = (() => {
             case 'brightness(100%)':
 
                 switch(parentNode.style.backgroundColor){
-                    case 'red':
-                        parentNode.style.backgroundColor = 'green';
+                    case 'rgb(145, 63, 16)':
+                        parentNode.style.backgroundColor = 'rgb(11, 119, 8';
                         break
-                    case 'green':
-                        parentNode.style.backgroundColor = 'yellow';
+                    case 'rgb(11, 119, 8)':
+                        parentNode.style.backgroundColor = 'rgb(138, 130, 28)';
                         break
-                    case 'yellow':
-                        parentNode.style.backgroundColor = 'red';
+                    case 'rgb(138, 130, 28)':
+                        parentNode.style.backgroundColor = 'rgb(145, 63, 16)';
                         break 
                     }
 
@@ -28,14 +28,14 @@ const lists = (() => {
             default:
 
                 switch(parentNode.style.backgroundColor){
-                    case 'red':
-                        parentNode.style.backgroundColor = 'green';
+                    case 'rgb(145, 63, 16)':
+                        parentNode.style.backgroundColor = 'rgb(11, 119, 8)';
                         break
-                    case 'green':
-                        parentNode.style.backgroundColor = 'yellow';
+                    case 'rgb(11, 119, 8)':
+                        parentNode.style.backgroundColor = 'rgb(138, 130, 28)';
                         break
-                    case 'yellow':
-                        parentNode.style.backgroundColor = 'red';
+                    case 'rgb(138, 130, 28)':
+                        parentNode.style.backgroundColor = ' rgb(145, 63, 16)';
                         break
                     }
                     
@@ -48,7 +48,7 @@ const lists = (() => {
 
         let todoList = document.createElement('div')
         todoList.className = 'todoList';
-        todoList.style.backgroundColor = 'green';
+        todoList.style.backgroundColor = 'rgb(11, 119, 8)';
         parentNode.appendChild(todoList)
         
         let setPriority = document.createElement('button')
@@ -79,9 +79,9 @@ const lists = (() => {
 
         let listDesc = document.createElement('textarea')
         listDesc.className = 'listDescs';
-        listDesc.maxLength = '240';
-        listDesc.rows = '5';
-        listDesc.cols = '55';
+        listDesc.maxLength = '120';
+        listDesc.rows = '4';
+        listDesc.cols = '30';
         listDesc.placeholder = ' Task description... ';
 
         let checkbox = document.createElement('input')
@@ -98,9 +98,8 @@ const lists = (() => {
 
         todoList.appendChild(listTitle)
         todoList.appendChild(checkbox)
-        todoList.appendChild(br1)
         todoList.appendChild(listDesc)
-        todoList.appendChild(br2)
+        todoList.appendChild(br1)
         todoList.appendChild(setPriority)
         todoList.appendChild(deleteBtn)
 
