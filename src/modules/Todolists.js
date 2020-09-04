@@ -13,7 +13,7 @@ const lists = (() => {
 
                 switch(parentNode.style.backgroundColor){
                     case 'rgb(145, 63, 16)':
-                        parentNode.style.backgroundColor = 'rgb(11, 119, 8';
+                        parentNode.style.backgroundColor = 'rgb(11, 119, 8)';
                         break
                     case 'rgb(11, 119, 8)':
                         parentNode.style.backgroundColor = 'rgb(138, 130, 28)';
@@ -75,7 +75,6 @@ const lists = (() => {
         listTitle.placeholder = ' Task Title... ';
 
         let br1 = document.createElement('br')
-        let br2 = document.createElement('br')
 
         let listDesc = document.createElement('textarea')
         listDesc.className = 'listDescs';
@@ -87,6 +86,7 @@ const lists = (() => {
         let checkbox = document.createElement('input')
         checkbox.type = 'checkbox';
         checkbox.className = 'checkbox';
+        checkbox.name = 'checkbox'
         checkbox.addEventListener('change', function(e){
             let parentNode = this.parentNode
             if(this.checked){

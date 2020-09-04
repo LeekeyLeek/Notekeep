@@ -10,7 +10,13 @@ newProjectBtn.addEventListener('click', function(e){
 const defaultTaskBtn = document.getElementById('defaultTask')
 defaultTaskBtn.addEventListener('click', function(e){
     let parentNode = this.parentNode
-    lists.create(parentNode)
+    switch(parentNode.childElementCount){
+        case 7:
+            break
+        default:
+            lists.create(parentNode)
+            break
+    }
 });
 
 const defaultDlt = document.getElementById('defaultDlt')
