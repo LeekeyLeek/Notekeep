@@ -11,21 +11,19 @@ const project = (() => {
 
         switch(answer){
             case 1:
-                return 'rgb(87, 43, 145)'
+                return 'rgb(107, 62, 62)'
             case 2:
-                return 'rgb(41, 149, 168)'
+                return 'rgb(62, 97, 107)'
             case 3:
-                return 'rgb(25, 119, 75)'
+                return 'rgb(83, 62, 107)'
             case 4:
-                return 'rgb(18, 66, 105)'
+                return 'rgb(107, 62, 62)'
             case 5:
-                return 'rgb(121, 46, 32)'
+                return 'rgb(62, 107, 70)'
             case 6:
-                return 'rgb(99, 30, 93)'
+                return 'rgb(107, 91, 62)'
             case 7:
-                return 'rgb(151, 89, 19)'
-            case 8:
-                return 'rgb(77, 49, 18)'
+                return 'rgb(107, 62, 103)'
             default:
                 return 'rgb(146, 125, 6)'
         }
