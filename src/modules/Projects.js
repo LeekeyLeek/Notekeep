@@ -6,7 +6,7 @@ const project = (() => {
 
     let randomRGBA = () => {
         let min = 1
-        let max = 8
+        let max = 7
         let answer = Math.floor(Math.random() * (max - min) + min)
 
         switch(answer){
